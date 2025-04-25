@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NyayaMitra</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%; /* Prevent automatic text adjustment on iOS */
+      }
+      /* Prevent text overflow on mobile */
+      * {
+        word-wrap: break-word;
+        box-sizing: border-box;
+      }
+      
+      /* Fix for mobile title display */
+      .headline-suffix {
+        display: inline-block;
+      }
+      
+      @media (max-width: 580px) {
+        /* Ensure the headline stays on one line for smaller screens */
+        .headline-suffix {
+          display: inline-block;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

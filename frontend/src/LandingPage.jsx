@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Navbar from './components/Navbar';
 
 // --- Style Definitions ---
 const colors = {
@@ -551,6 +552,7 @@ const LandingPage = () => {
 
   return (
     <div style={{...styles.globalReset, ...styles.pageContainer}}>
+      <Navbar />
       {/* --- Hero Section --- */}
       <motion.section
         style={{ ...styles.section, ...styles.heroSection }}

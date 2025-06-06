@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar';
 const IconPlaceholder = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12zm-1-5a1 1 0 11-2 0 1 1 0 012 0zm3 0a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd"></path>
@@ -65,7 +66,7 @@ const MainContent = () => {
     },
     {
       title: 'Request Mediation',
-      description: 'Initiate a guided negotiation process with a neutral third-party mediator.',
+      description: 'Initiate a guided negotiation process with an AI-based third-party mediator.',
       action: () => console.log('Start Mediation Request'),
     },
     {
@@ -73,11 +74,7 @@ const MainContent = () => {
       description: 'Submit your case for a binding decision by an impartial arbitrator.',
       action: () => console.log('Start Arbitration Application'),
     },
-    {
-      title: 'General Dispute Form',
-      description: 'Use our general form for disputes not covered by specific categories.',
-      action: () => console.log('Start General Dispute Form'),
-    },
+    
   ];
 
   return (
@@ -123,7 +120,8 @@ const MainContent = () => {
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen flex bg-slate-100 antialiased">
+    <div className=" h-screen bg-slate-100">
+    <Navbar />
       <Sidebar />
       <MainContent />
     </div>

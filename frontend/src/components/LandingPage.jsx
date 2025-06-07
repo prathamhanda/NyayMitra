@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from './Navbar';
 
 // --- Style Definitions ---
 const colors = {
@@ -552,7 +551,6 @@ const LandingPage = () => {
 
   return (
     <div style={{...styles.globalReset, ...styles.pageContainer}}>
-      <Navbar />
       {/* --- Hero Section --- */}
       <motion.section
         style={{ ...styles.section, ...styles.heroSection }}
@@ -574,7 +572,7 @@ const LandingPage = () => {
           </motion.p>
           <motion.div style={styles.buttonContainer} variants={fadeInUp}>
             <motion.a
-              href="#get-started"
+              href="/dashboard"
               style={styles.ctaButton}
               whileHover={{ scale: 1.03, backgroundColor: colors.primaryDark }}
               whileTap={{ scale: 0.98 }}

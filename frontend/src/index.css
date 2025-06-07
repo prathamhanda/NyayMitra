@@ -144,3 +144,56 @@ button:focus-visible {
     margin-bottom: 0;
   }
 }
+
+@layer utilities {
+  /* ... existing utilities ... */
+  .animate-message-in {
+    animation: messageSlideIn 0.3s ease-out forwards;
+  }
+  @keyframes messageSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  /* Custom dark background for chat area if needed */
+  .dark .dark\:bg-slate-850 {
+    background-color: #172033; /* A slightly different dark shade for chat message area */
+  }
+}
+
+/* Ensure html, body, #root take full height for h-screen to work correctly */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Default light mode background for html/body if not set by browser */
+  @apply bg-white; /* Or another light color like bg-gray-100 */
+}
+
+html.dark {
+  background-color: black; /* Changed from slate-900 to black for better contrast with shadow */
+  color: #e2e8f0; /* Tailwind slate-200 */
+}
+
+/* Style for textarea scrollbar (optional, for better aesthetics) */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #94a3b8; /* slate-400 */
+  border-radius: 3px;
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b; /* slate-500 */
+}
+.dark textarea::-webkit-scrollbar-thumb {
+  background-color: #475569; /* slate-600 */
+}
+.dark textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #334155; /* slate-700 */
+}
